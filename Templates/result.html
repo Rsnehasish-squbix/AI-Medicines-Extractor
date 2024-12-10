@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Text Extraction Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Medicine Extraction </h1>
+
+        <!-- Display status -->
+        <!-- <div class="mt-3">
+            <h4>Status:</h4>
+            <p>{{ status }}</p>
+        </div> -->
+
+        <!-- Display pharmacy data -->
+        <div class="mt-3">
+            <h4>Pharmacy Details:</h4>
+            {% if pharmacy %}
+                {{ pharmacy|safe }}
+            {% else %}
+                <p>No pharmacy details available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Display services -->
+        <!-- <div class="mt-3">
+            <h4>Medical Services:</h4>
+            {% if services.tests %}
+                <ul>
+                    {% for test in services.tests %}
+                        <li>{{ test }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No medical services mentioned.</p>
+            {% endif %}
+        </div> -->
+
+        <!-- Display unknown words
+        <div class="mt-3">
+            <h4>Unknown Words:</h4>
+            {% if unknown_words %}
+                {{ unknown_words|safe }}
+            {% else %}
+                <p>No unknown words identified.</p>
+            {% endif %}
+        </div> -->
+
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
